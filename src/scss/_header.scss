@@ -1,0 +1,48 @@
+.headerContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: min-content;
+  max-width: 25em;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid $tertiary;
+
+  &__text {
+    width: min-content;
+    font-size: 1.6em;
+    line-height: 1;
+    color: $primary;
+  }
+
+  &__score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 7rem;
+    border-radius: 8px;
+    background-color: $primary;
+  }
+
+  &__label {
+    font-size: 0.8em;
+    font-weight: 600;
+    color: $lightText;
+  }
+
+  &__number {
+    font-size: 2.8em;
+    font-weight: 700;
+    line-height: 1;
+    color: $darkText;
+  }
+}

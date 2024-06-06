@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$primary: white;
+$secondary: #dfdfdf;
+$secondaryDark: #c0c0c0;
+$tertiary: hsl(217, 16%, 45%);
+$background: linear-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+$darkText: hsl(229, 25%, 31%);
+$lightText: hsl(229, 64%, 46%);
+
+@import "./scss/header";
+@import "./scss/gameButton";
+@import "./scss/footer";
+@import "./scss/rockPaperScissor";
+@import "./scss/pickedOption";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: $background;
+}
+
+img {
+  -webkit-user-drag: none;
+}

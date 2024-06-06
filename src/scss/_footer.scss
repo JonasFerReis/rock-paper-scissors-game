@@ -1,0 +1,87 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__authorInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: max-content;
+  }
+
+  &__author {
+    color: white;
+  }
+
+  &__links {
+    display: flex;
+    gap: 6px;
+    height: 25px;
+  }
+
+  &__linkedInIcon {
+    width: 25px;
+  }
+
+  &__githubIcon {
+    width: 25px;
+  }
+
+  &__openRulesbutton {
+    height: 2em;
+    width: 7em;
+    font-size: 0.8em;
+    border-radius: 4px;
+    border: 2px solid $tertiary;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+  }
+}
+
+.rulesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: #0000006f;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 1.5em;
+  border-radius: 8px;
+  background-color: $primary;
+
+  &__title {
+    font-size: 1.6em;
+    font-weight: 600;
+    color: $darkText;
+  }
+
+  &__closeButton {
+    float: right;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    font-size: 1.6em;
+    color: hsla(217, 16%, 45%, 50%);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 696px) {
+  .footer {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 12px;
+  }
+}

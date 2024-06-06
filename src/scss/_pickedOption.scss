@@ -1,0 +1,87 @@
+.pickedOption {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "youPick result housePick";
+  width: 45em;
+
+  &__youPick,
+  &__housePick {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.6em;
+    height: 100%;
+    width: 100%;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: white;
+  }
+
+  &__youPick {
+    grid-area: youPick;
+  }
+
+  &__housePick {
+    grid-area: housePick;
+  }
+
+  &__empty {
+    height: 8em;
+    width: 8em;
+    border-radius: 50%;
+    background-color: hsl(220, 49%, 15%);
+  }
+}
+
+.resultContainer {
+  grid-area: result;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding-top: 6em;
+
+  &__resultLabel {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+  }
+
+  &__playAgainButton {
+    height: 2.5em;
+    width: 10em;
+    font-size: 1em;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    background-color: white;
+    color: red;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 696px) {
+  .pickedOption {
+    width: 23em;
+    row-gap: 2vh;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "youPick housePick"
+      "result result";
+
+    &__youPick,
+    &__housePick {
+      font-size: 1em;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .resultContainer {
+    padding-top: 0;
+    justify-content: center;
+  }
+}
